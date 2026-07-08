@@ -28,6 +28,17 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Mobile Dropdown Toggle
+    const dropdownToggle = document.querySelector('.dropdown-toggle');
+    if (dropdownToggle) {
+        dropdownToggle.addEventListener('click', (e) => {
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                dropdownToggle.parentElement.classList.toggle('active');
+            }
+        });
+    }
+
     // Theme Toggle
     const themeToggle = document.getElementById('theme-toggle');
     const html = document.documentElement;

@@ -6,8 +6,31 @@ const translations = {
         "nav_publications": "Publications",
         "nav_projects": "Projects",
         "nav_seminars": "Seminars",
+        "nav_media": "Media",
+        "nav_gallery": "Gallery",
+        "nav_blog": "Blog",
         "nav_cv": "CV",
         "nav_contact": "Contact",
+
+        // Blog
+        "blog_title": "Thoughts & Field Notes",
+        "blog_subtitle": "Articles, reflections, and insights on Bangla literature and society.",
+        "blog_post_1_title": "The Politics of Emotion in Defining Bengali Identity",
+        "blog_post_1_date": "October 12, 2025",
+        "blog_post_1_excerpt": "An exploration of how emotional frameworks shape our understanding of what it means to be Bengali...",
+        "blog_post_2_title": "Field Notes: Folklore Collection in Rural Bengal",
+        "blog_post_2_date": "March 24, 2024",
+        "blog_post_2_excerpt": "Reflections on the methodological challenges and unexpected joys of gathering oral traditions in remote villages...",
+
+        // Gallery
+        "gallery_title": "Media & Gallery",
+        "gallery_subtitle": "Fieldwork, book launches, and press coverage.",
+        "gal_fieldwork_title": "Fieldwork in Sylhet",
+        "gal_fieldwork_desc": "Documenting oral traditions and rural narratives. (2025)",
+        "gal_book_title": "Book Launch at Bangla Academy",
+        "gal_book_desc": "Launch of 'Digital Archiving of Folklore'. (2024)",
+        "gal_press_title": "BTV Interview",
+        "gal_press_desc": "Discussing the role of Digital Humanities. (2023)",
 
         // Home
         "hero_title": "Exploring the intersections of <span>Bangla Literature</span> and Society.",
@@ -138,8 +161,31 @@ const translations = {
         "nav_publications": "প্রকাশনা",
         "nav_projects": "প্রকল্পসমূহ",
         "nav_seminars": "সেমিনার",
-        "nav_cv": "সিভি",
+        "nav_media": "মিডিয়া",
+        "nav_gallery": "গ্যালারি",
+        "nav_blog": "ব্লগ",
+        "nav_cv": "জীবনবৃত্তান্ত",
         "nav_contact": "যোগাযোগ",
+
+        // Blog
+        "blog_title": "চিন্তাভাবনা ও ফিল্ড নোট",
+        "blog_subtitle": "বাংলা সাহিত্য ও সমাজ নিয়ে প্রবন্ধ, চিন্তাভাবনা এবং অন্তর্দৃষ্টি।",
+        "blog_post_1_title": "বাঙালি সত্তা নির্ধারণে আবেগের রাজনীতি",
+        "blog_post_1_date": "১২ অক্টোবর, ২০২৫",
+        "blog_post_1_excerpt": "বাঙালি বলতে কী বোঝায়, আমাদের এই বোঝাপড়াকে আবেগের কাঠামো কীভাবে প্রভাবিত করে তার একটি অন্বেষণ...",
+        "blog_post_2_title": "ফিল্ড নোট: গ্রামীণ বাংলায় লোকজ উপাদান সংগ্রহ",
+        "blog_post_2_date": "২৪ মার্চ, ২০২৪",
+        "blog_post_2_excerpt": "প্রত্যন্ত গ্রামগুলোতে মৌখিক ঐতিহ্য সংগ্রহের পদ্ধতিগত চ্যালেঞ্জ এবং অপ্রত্যাশিত আনন্দের কিছু অভিজ্ঞতা...",
+
+        // Gallery
+        "gallery_title": "মিডিয়া ও গ্যালারি",
+        "gallery_subtitle": "মাঠপর্যায়ের গবেষণা, বইয়ের মোড়ক উন্মোচন এবং গণমাধ্যমের খবর।",
+        "gal_fieldwork_title": "সিলেটে মাঠপর্যায়ের গবেষণা",
+        "gal_fieldwork_desc": "মৌখিক ঐতিহ্য এবং গ্রামীণ আখ্যান নথিবদ্ধ করা। (২০২৫)",
+        "gal_book_title": "বাংলা একাডেমিতে বইয়ের মোড়ক উন্মোচন",
+        "gal_book_desc": "'ডিজিটাল আর্কাইভিং অফ ফোকলোর' বইয়ের প্রকাশনা অনুষ্ঠান। (২০২৪)",
+        "gal_press_title": "বিটিভি সাক্ষাৎকার",
+        "gal_press_desc": "ডিজিটাল হিউম্যানিটিজ এর ভূমিকা নিয়ে আলোচনা। (২০২৩)",
 
         // Home
         "hero_title": "<span>বাংলা সাহিত্য</span> এবং সমাজের আন্তঃসম্পর্ক অন্বেষণ।",
