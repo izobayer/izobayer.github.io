@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Zobayer Abdullah</title>
+    <meta name="description" content="Research projects by Zobayer Abdullah.">
+    
+    <!-- Fonts and Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <a href="index.html" class="brand">
+                Zobayer Abdullah <span class="brand-dot"></span>
+            </a>
+            
+            <div class="nav-links">
+                <a href="index.html" class="nav-link" data-i18n="nav_home">Home</a>
+                <a href="lab.html" class="nav-link" data-i18n="nav_lab">DH Lab</a>
+                <a href="publications.html" class="nav-link" data-i18n="nav_publications">Publications</a>
+                <a href="projects.html" class="nav-link active" data-i18n="nav_projects">Projects</a>
+                <a href="seminars.html" class="nav-link" data-i18n="nav_seminars">Seminars</a>
+                <a href="cv.html" class="nav-link" data-i18n="nav_cv">CV</a>
+                <a href="contact.html" class="nav-link" data-i18n="nav_contact">Contact</a>
+                <button id="lang-toggle" class="lang-toggle" aria-label="Toggle Language">বাং</button>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+                    <i class="fas fa-sun"></i>
+                </button>
+            </div>
+            
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="section" style="padding-top: var(--space-12); padding-bottom: var(--space-4);">
+        <div class="container">
+            <h1 class="hero-title" style="font-size: 3rem; margin-bottom: 0;" data-i18n="proj_hero_title">Research <span>Projects</span></h1>
+            <p class="hero-subtitle" style="margin-top: var(--space-2);" data-i18n="proj_hero_subtitle">Ongoing and completed research initiatives.</p>
+        </div>
+    </header>
+
+    <section class="section" style="padding-top: 0;">
+        <div class="container">
+            
+            <div class="grid-3 animate-on-scroll">
+                
+                <!-- Project Card Placeholder -->
+                <div class="glass-card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                    <img src="https://images.unsplash.com/photo-1532153975070-2e9ab71f1b14?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Project Cover" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: var(--space-4); flex-grow: 1; display: flex; flex-direction: column;">
+                        <span class="hero-badge" style="font-size: 0.75rem; margin-bottom: var(--space-2); align-self: flex-start;" data-i18n="proj_badge_dh">Digital Humanities</span>
+                        <h3 style="margin-bottom: var(--space-2);" data-i18n="proj_1_title">Corpus of Bangla Literature</h3>
+                        <p style="color: var(--color-text-muted); font-size: 0.95rem; margin-bottom: var(--space-4); flex-grow: 1;" data-i18n="proj_1_desc">
+                            Building a comprehensive digital archive and analysis platform for classical and modern Bangla texts.
+                        </p>
+                        <a href="lab.html" class="btn btn-outline" style="align-self: flex-start; padding: 0.5rem 1rem;" data-i18n="btn_view_details">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Archiving Project -->
+                <div class="glass-card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                    <img src="assets/images/shahitto_potrika.jpeg" alt="Archiving Cover" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: var(--space-4); flex-grow: 1; display: flex; flex-direction: column;">
+                        <span class="hero-badge" style="font-size: 0.75rem; margin-bottom: var(--space-2); align-self: flex-start;" data-i18n="proj_badge_archiving">Digital Archiving</span>
+                        <h3 style="margin-bottom: var(--space-2);" data-i18n="proj_2_title">Shahitto Potrika Archive</h3>
+                        <p style="color: var(--color-text-muted); font-size: 0.95rem; margin-bottom: var(--space-4); flex-grow: 1;" data-i18n="proj_2_desc">
+                            Successfully completed the digital archiving of "Shahitto Potrika" (journal.bangla.du.ac.bd), the oldest Academic Bangla journal established in 1957.
+                        </p>
+                        <a href="https://journal.bangla.du.ac.bd" target="_blank" class="btn btn-outline" style="align-self: flex-start; padding: 0.5rem 1rem;" data-i18n="btn_view_journal">View Journal</a>
+                    </div>
+                </div>
+
+                <!-- Platform Project -->
+                <div class="glass-card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                    <img src="assets/images/bangla_academy_platforms.jpeg" alt="Platform Cover" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: var(--space-4); flex-grow: 1; display: flex; flex-direction: column;">
+                        <span class="hero-badge" style="font-size: 0.75rem; margin-bottom: var(--space-2); align-self: flex-start;" data-i18n="proj_badge_platform">Platform Development</span>
+                        <h3 style="margin-bottom: var(--space-2);" data-i18n="proj_3_title">Bangla Academy Platforms</h3>
+                        <p style="color: var(--color-text-muted); font-size: 0.95rem; margin-bottom: var(--space-4); flex-grow: 1;" data-i18n="proj_3_desc">
+                            Developed the official Journal platform (journal.banglaacademy.gov.bd) and Publication website (publication.banglaacademy.gov.bd) for Bangla Academy.
+                        </p>
+                        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                            <a href="https://journal.banglaacademy.gov.bd" target="_blank" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.8rem;" data-i18n="btn_journal">Journal</a>
+                            <a href="https://publication.banglaacademy.gov.bd" target="_blank" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.8rem;" data-i18n="nav_publications">Publications</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Socio-Legal Project -->
+                <div class="glass-card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Socio-Legal Project Cover" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: var(--space-4); flex-grow: 1; display: flex; flex-direction: column;">
+                        <span class="hero-badge" style="font-size: 0.75rem; margin-bottom: var(--space-2); align-self: flex-start;" data-i18n="proj_badge_sociolegal">Socio-Legal Research</span>
+                        <h3 style="margin-bottom: var(--space-2);" data-i18n="proj_4_title">Balancing Professional Success and Marital Expectations</h3>
+                        <p style="color: var(--color-text-muted); font-size: 0.95rem; margin-bottom: var(--space-4); flex-grow: 1;" data-i18n="proj_4_desc">
+                            A Socio-Legal Study on the Career-Marriage Trade-off Facing Women in Bangladesh.<br><br><b>Role:</b> Co-Principal Investigator [2024-2025]
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div style="text-align: center; margin-top: var(--space-8); padding: var(--space-8); background: var(--color-surface); border-radius: var(--radius-lg); border: 1px dashed var(--color-border);" class="animate-on-scroll">
+                <i class="fas fa-file-contract" style="font-size: 3rem; color: var(--color-text-muted); margin-bottom: var(--space-4);"></i>
+                <h3 data-i18n="proj_more_title">More projects coming soon</h3>
+                <p style="color: var(--color-text-muted);" data-i18n="proj_more_desc">Additional research grants and project details are being updated.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <a href="index.html" class="brand" style="margin-bottom: var(--space-3); font-size: 1.25rem;">
+                        Zobayer Abdullah <span class="brand-dot"></span>
+                    </a>
+                    <p style="color: var(--color-text-muted); font-size: 0.9rem;" data-i18n="footer_role">
+                        Assistant Professor<br>
+                        Department of Bangla<br>
+                        University of Dhaka
+                    </p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 data-i18n="footer_links_title">Quick Links</h4>
+                    <div class="footer-links">
+                        <a href="index.html" data-i18n="nav_home">Home</a>
+                        <a href="lab.html" data-i18n="nav_lab">DH Lab</a>
+                        <a href="publications.html" data-i18n="nav_publications">Publications</a>
+                        <a href="projects.html" data-i18n="nav_projects">Projects</a>
+                        <a href="seminars.html" data-i18n="nav_seminars">Seminars</a>
+                        <a href="cv.html" data-i18n="nav_cv">CV</a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 data-i18n="footer_contact_title">Contact</h4>
+                    <div class="footer-links">
+                        <a href="mailto:zobayer@du.ac.bd"><i class="fas fa-envelope"></i> zobayer@du.ac.bd</a>
+                        <a href="tel:01913885708"><i class="fas fa-phone"></i> 01913885708</a>
+                    </div>
+                    <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+                        <a href="https://fb.com/zobaayer" target="_blank" rel="noopener noreferrer" style="color: var(--color-text-muted); font-size: 1.2rem; transition: color 0.3s;" onmouseover="this.style.color='var(--color-primary)'" onmouseout="this.style.color='var(--color-text-muted)'"><i class="fab fa-facebook"></i></a>
+                        <a href="https://linkedin.com/in/izobayer" target="_blank" rel="noopener noreferrer" style="color: var(--color-text-muted); font-size: 1.2rem; transition: color 0.3s;" onmouseover="this.style.color='var(--color-primary)'" onmouseout="this.style.color='var(--color-text-muted)'"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/izobayer" target="_blank" rel="noopener noreferrer" style="color: var(--color-text-muted); font-size: 1.2rem; transition: color 0.3s;" onmouseover="this.style.color='var(--color-primary)'" onmouseout="this.style.color='var(--color-text-muted)'"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p data-i18n="footer_copyright">&copy; 2026 Zobayer Abdullah. All rights reserved. | University of Dhaka</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/translations.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
