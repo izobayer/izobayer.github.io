@@ -33,21 +33,25 @@ const translations = {
         "gal_press_desc": "Discussing the role of Digital Humanities. (2023)",
 
         // Home
-        "hero_title": "Exploring the intersections of <span>Bangla Literature</span> and Society.",
-        "hero_subtitle": "Assistant Professor at the Department of Bangla, Faculty of Arts, and a Digital Archiving Expert. Dedicated to uncovering the socio-cultural narratives in folklore and literature through digital humanities.",
+        "hero_title": "Exploring the intersections of <span>Language, Politics,</span> and Environment.",
+        "hero_subtitle": "Assistant Professor at the Department of Bangla, Faculty of Arts. Dedicated to exploring language communication, language politics, and environmental literature.",
         "btn_explore_lab": "Explore the Lab",
         "btn_publications": "Publications",
         "section_interests": "Research Interests",
-        "int_folklore_title": "Folklore & Culture",
-        "int_folklore_desc": "Analyzing the oral traditions and cultural narratives of Bengal.",
-        "int_dh_title": "Digital Humanities",
-        "int_dh_desc": "Applying computational methods to literary analysis and archiving.",
-        "int_modern_title": "Modern Literature",
-        "int_modern_desc": "Studying post-independence narratives and socio-political themes.",
+        "int_folklore_title": "Language Communication",
+        "int_folklore_desc": "Investigating the dynamics of communication in various linguistic and social contexts.",
+        "int_dh_title": "Language Politics",
+        "int_dh_desc": "Examining the intersection of language, power, and identity in socio-political spheres.",
+        "int_modern_title": "Environmental Literature",
+        "int_modern_desc": "Exploring ecological themes, nature narratives, and environmental justice in literature.",
+        
+        // About
+        "about_title": "About <span>Me</span>",
+        "about_text": "I am an Assistant Professor at the Department of Bangla, University of Dhaka, where my research focuses on the intersections of language communication, language politics, and environmental literature. My scholarly work spans diverse socio-political and ecological themes, from analyzing class struggle and the existential crises of marginalized communities in modern Bangla literature (such as the works of Akhteruzzaman Elias and Hasan Azizul Huq) to exploring the aesthetics of nature in Binoy Majumdar's poetry.<br><br>Recently, my research has expanded into pressing socio-legal and environmental spheres, including examining climate migration in South Asia and revisiting the definition of \"refugee\" for climate-displaced communities. I also investigate language communication apprehension among students and the cultural-political contexts of traditional Bengali folklore and music. Through my publications, I aim to bridge traditional literary analysis with modern socio-cultural and environmental realities.",
 
         // DH Lab
-        "lab_title": "Digital Humanities <span>Lab</span>",
-        "lab_subtitle": "A Computational Approach to the Corpus of Bangla Literature.",
+        "lab_title": "Language & Environment <span>Lab</span>",
+        "lab_subtitle": "A computational and analytical approach to linguistics and eco-criticism.",
         "lab_search_placeholder": "Search the corpus (e.g. 'চর্যাপদ', 'রবীন্দ্রনাথ', 'হাসান আজিজুল হক')...",
         "lab_search_btn": "Search",
         "lab_stat_words": "Words Indexed",
@@ -188,21 +192,25 @@ const translations = {
         "gal_press_desc": "ডিজিটাল হিউম্যানিটিজ এর ভূমিকা নিয়ে আলোচনা। (২০২৩)",
 
         // Home
-        "hero_title": "<span>বাংলা সাহিত্য</span> এবং সমাজের আন্তঃসম্পর্ক অন্বেষণ।",
-        "hero_subtitle": "বাংলা বিভাগ, কলা অনুষদের সহকারী অধ্যাপক এবং ডিজিটাল আর্কাইভিং বিশেষজ্ঞ। ডিজিটাল হিউম্যানিটিজের মাধ্যমে ফোকলোর এবং সাহিত্যের আর্থ-সামাজিক আখ্যান উন্মোচনে নিবেদিত।",
+        "hero_title": "<span>ভাষা, রাজনীতি,</span> এবং পরিবেশের আন্তঃসম্পর্ক অন্বেষণ।",
+        "hero_subtitle": "বাংলা বিভাগ, কলা অনুষদের সহকারী অধ্যাপক। ভাষা যোগাযোগ, ভাষার রাজনীতি এবং পরিবেশ সাহিত্য অন্বেষণে নিবেদিত।",
         "btn_explore_lab": "ল্যাব দেখুন",
         "btn_publications": "প্রকাশনাসমূহ",
         "section_interests": "গবেষণার আগ্রহ",
-        "int_folklore_title": "ফোকলোর ও সংস্কৃতি",
-        "int_folklore_desc": "বাংলার মৌখিক ঐতিহ্য এবং সাংস্কৃতিক আখ্যান বিশ্লেষণ।",
-        "int_dh_title": "ডিজিটাল হিউম্যানিটিজ",
-        "int_dh_desc": "সাহিত্য বিশ্লেষণ এবং আর্কাইভিংয়ে কম্পিউটেশনাল পদ্ধতির প্রয়োগ।",
-        "int_modern_title": "আধুনিক সাহিত্য",
-        "int_modern_desc": "স্বাধীনতা-উত্তর আখ্যান এবং আর্থ-সামাজিক থিম অধ্যয়ন।",
+        "int_folklore_title": "ভাষা যোগাযোগ",
+        "int_folklore_desc": "বিভিন্ন ভাষিক ও সামাজিক প্রেক্ষাপটে যোগাযোগের গতিশীলতা অনুসন্ধান।",
+        "int_dh_title": "ভাষার রাজনীতি",
+        "int_dh_desc": "আর্থ-সামাজিক ক্ষেত্রে ভাষা, ক্ষমতা ও পরিচয়ের আন্তঃসম্পর্ক বিশ্লেষণ।",
+        "int_modern_title": "পরিবেশ সাহিত্য",
+        "int_modern_desc": "সাহিত্যে পরিবেশগত থিম, প্রকৃতির আখ্যান এবং পরিবেশগত ন্যায়বিচার অন্বেষণ।",
+        
+        // About
+        "about_title": "আমার <span>সম্পর্কে</span>",
+        "about_text": "আমি ঢাকা বিশ্ববিদ্যালয়ের বাংলা বিভাগের একজন সহকারী অধ্যাপক। আমার গবেষণার মূল ক্ষেত্র ভাষা যোগাযোগ, ভাষার রাজনীতি এবং পরিবেশ সাহিত্য। আমার গবেষণামূলক কাজ বৈচিত্র্যময় আর্থ-সামাজিক ও পরিবেশগত থিম নিয়ে আবর্তিত হয়— আখতারুজ্জামান ইলিয়াস এবং হাসান আজিজুল হকের মতো লেখকদের আধুনিক বাংলা সাহিত্যে শ্রেণিদ্বন্দ্ব এবং প্রান্তিক মানুষের অস্তিত্বসংকট বিশ্লেষণ থেকে শুরু করে বিনয় মজুমদারের কবিতায় প্রকৃতির নান্দনিকতা অন্বেষণ পর্যন্ত।<br><br>সম্প্রতি, আমার গবেষণা আর্থ-সামাজিক-আইনি এবং পরিবেশগত ক্ষেত্রে প্রসারিত হয়েছে, যার মধ্যে রয়েছে দক্ষিণ এশিয়ায় জলবায়ু অভিবাসন নিয়ে কাজ করা এবং জলবায়ু-উদ্বাস্তু জনগোষ্ঠীর জন্য 'উদ্বাস্তু'র সংজ্ঞা পুনর্মূল্যায়ন করা। আমি শিক্ষার্থীদের মধ্যে ভাষা যোগাযোগের ভীতি এবং ঐতিহ্যবাহী বাংলা ফোকলোর ও সঙ্গীতের সাংস্কৃতিক-রাজনৈতিক প্রেক্ষাপট নিয়েও গবেষণা করি। আমার প্রকাশনার মাধ্যমে আমি প্রথাগত সাহিত্য বিশ্লেষণের সাথে আধুনিক আর্থ-সামাজিক ও পরিবেশগত বাস্তবতার সেতুবন্ধন তৈরি করার লক্ষ্য রাখি।",
 
         // DH Lab
-        "lab_title": "ডিজিটাল হিউম্যানিটিজ <span>ল্যাব</span>",
-        "lab_subtitle": "বাংলা সাহিত্যের করপাস নিয়ে একটি কম্পিউটেশনাল দৃষ্টিভঙ্গি।",
+        "lab_title": "ভাষা ও পরিবেশ <span>ল্যাব</span>",
+        "lab_subtitle": "ভাষাবিজ্ঞান এবং পরিবেশ-সমালোচনাতত্ত্বের উপর একটি গণনামূলক ও বিশ্লেষণাত্মক পদ্ধতি।",
         "lab_search_placeholder": "করপাস অনুসন্ধান করুন (যেমন 'চর্যাপদ', 'রবীন্দ্রনাথ')...",
         "lab_search_btn": "অনুসন্ধান",
         "lab_stat_words": "শব্দ ইনডেক্সড",
