@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="International Mother Language Institute Publication">
+    <title>IMLI Publication | Zobayer Abdullah</title>
+    <style>
+        * { box-sizing: border-box; }
+        html, body { height: 100%; margin: 0; }
+        body { display: flex; flex-direction: column; background: #f8fafc; font-family: Inter, system-ui, sans-serif; }
+        .viewer-bar {
+            min-height: 58px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            padding: 10px 18px;
+            color: #fff;
+            background: #0f172a;
+            border-bottom: 3px solid #ef2b2d;
+        }
+        .viewer-bar strong { font-size: 16px; }
+        .viewer-actions { display: flex; gap: 10px; }
+        .viewer-actions a {
+            color: #fff;
+            text-decoration: none;
+            padding: 7px 12px;
+            border: 1px solid rgba(255,255,255,.35);
+            border-radius: 7px;
+            white-space: nowrap;
+        }
+        .viewer-actions a:last-child { background: #ef2b2d; border-color: #ef2b2d; }
+        iframe { width: 100%; flex: 1; border: 0; background: #fff; }
+        @media (max-width: 640px) {
+            .viewer-bar { align-items: flex-start; flex-direction: column; }
+            .viewer-actions { width: 100%; }
+            .viewer-actions a { flex: 1; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <header class="viewer-bar">
+        <strong>International Mother Language Institute Publication</strong>
+        <nav class="viewer-actions" aria-label="Publication viewer controls">
+            <a href="/">Zobayer.org</a>
+            <a href="https://hilarious-amethyst-gazelle.103-157-135-180.cpanel.site/index.php/imli" target="_blank" rel="noopener">Open full site</a>
+        </nav>
+    </header>
+    <iframe
+        src="https://hilarious-amethyst-gazelle.103-157-135-180.cpanel.site/index.php/imli"
+        title="International Mother Language Institute Publication"
+        loading="eager">
+        <p><a href="https://hilarious-amethyst-gazelle.103-157-135-180.cpanel.site/index.php/imli">Open the publication website</a></p>
+    </iframe>
+</body>
+</html>
