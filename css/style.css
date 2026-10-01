@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;600;700&display=swap');
 
-:root { --ink:#20221f; --muted:#5e625c; --rule:#d7d9d2; --paper:#fafaf7; --accent:#426b5b; --serif:'Libre Baskerville', Georgia, serif; --sans:'Source Sans 3', Arial, sans-serif; --mono:'DM Mono', monospace; }
+:root { --ink:#20221f; --muted:#5e625c; --rule:#d2d8da; --paper:#edf0f1; --accent:#426b5b; --serif:'Libre Baskerville', Georgia, serif; --sans:'Source Sans 3', Arial, sans-serif; --mono:'DM Mono', monospace; }
 * { box-sizing:border-box; }
 html { scroll-behavior:smooth; }
 body { margin:0; color:var(--ink); background:var(--paper); font:1.08rem/1.7 var(--sans); }
