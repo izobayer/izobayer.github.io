@@ -9,7 +9,7 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="research-page">
   <header class="site-header">
     <div class="shell">
       <a class="brand" href="/">Zobayer Abdullah</a>
@@ -18,52 +18,87 @@
       </nav>
     </div>
   </header>
-  <main class="shell">
-    <header class="page-intro projects-intro">
-      <div class="eyebrow">Academic research &amp; digital scholarship</div>
-      <h1>Research projects</h1>
-      <p class="tagline">Research on media, communication, language, education, and the digital systems that make scholarly knowledge more accessible.</p>
-      <div class="projects-overview" aria-label="Project overview">
-        <div class="project-stat"><strong>6</strong><span>Research projects</span></div>
-        <div class="project-stat"><strong>3</strong><span>Principal-investigator roles</span></div>
-        <div class="project-stat"><strong>6</strong><span>Publishing platforms</span></div>
-        <div class="project-stat"><strong>2021–2027</strong><span>Project timeline</span></div>
-      </div>
-    </header>
-    <nav class="project-jump" aria-label="Project sections"><a href="#research">Research projects</a><a href="#infrastructure">Digital infrastructure</a></nav>
-    <section id="research" class="section project-section">
-      <div class="section-grid">
-        <div class="section-label">Research projects</div>
-        <div>
-          <p class="project-count">Six projects in chronological order, with the most recent first.</p>
-          <div class="project-list">
-            <article id="instruction" class="project-card"><header class="project-card-header"><span>Project Manager</span><time>2025–2027</time></header><h2>The Impact of Medium of Instruction on Educational Outcomes and Job Attainment Among Youth in Bangladesh</h2><p>Higher Education Acceleration and Transformation (HEAT) Project, World Bank; implemented by the University Grants Commission of Bangladesh.</p><footer>Education · Youth · Bangladesh</footer></article>
-            <article id="apprehension" class="project-card"><header class="project-card-header"><span>Principal Investigator</span><time>2025–2026</time></header><h2>Communication Apprehension and Civic Engagement among Undergraduate Students in Bangladesh</h2><p>Examining the mediating role of willingness to communicate in undergraduate students’ civic engagement.</p><footer>Communication · Civic engagement · Higher education</footer></article>
-            <article id="trust" class="project-card"><header class="project-card-header"><span>Principal Investigator</span><time>2025–2026</time></header><h2>Disconnected and Distrustful? Internet Shutdowns, Information Environments, and Institutional Trust Among Generation Z in Bangladesh</h2><p>Investigating how internet shutdowns and information environments shape institutional trust among young people.</p><footer>Internet governance · Trust · Generation Z</footer></article>
-            <article class="project-card"><header class="project-card-header"><span>Principal Investigator</span><time>2025–2026</time></header><h2>From Classroom to Career: Are Language Degrees Market-Relevant in Bangladesh?</h2><p>University of Dhaka research project funded by the University Grants Commission of Bangladesh.</p><footer>Language education · Employment · Bangladesh</footer></article>
-            <article class="project-card"><header class="project-card-header"><span>Co-Principal Investigator</span><time>2024–2025</time></header><h2>Balancing Professional Success and Marital Expectations: A Socio-Legal Study on the Career-Marriage Trade-off Facing Women in Bangladesh</h2><p>University of Dhaka research project funded by the University Grants Commission of Bangladesh.</p><footer>Gender · Work · Socio-legal studies</footer></article>
-            <article class="project-card"><header class="project-card-header"><span>Data Analyst</span><time>2021–2022</time></header><h2>Communication Apprehension among Students of Bangladesh: A Comparative Study between Online and Offline Classes</h2><p>Contributed data analysis and report writing to a comparative study of learning environments.</p><footer>Communication · Online learning · Students</footer></article>
-          </div>
+  <main>
+    <section class="research-hero">
+      <div class="research-shell">
+        <div class="research-heading">
+          <p>Academic research</p>
+          <h1>Research Projects</h1>
+          <span class="research-rule" aria-hidden="true"></span>
+          <div class="research-intro">Leading and contributing to research on communication, language, education, digital information environments, and public knowledge in Bangladesh.</div>
+        </div>
+        <div class="research-stats" aria-label="Research project overview">
+          <div class="research-stat"><span class="stat-orb" aria-hidden="true">▦</span><strong>6</strong><span>Total projects</span></div>
+          <div class="research-stat"><span class="stat-orb" aria-hidden="true">PI</span><strong>3</strong><span>As PI</span></div>
+          <div class="research-stat"><span class="stat-orb" aria-hidden="true">PM</span><strong>1</strong><span>As project manager</span></div>
+          <div class="research-stat"><span class="stat-orb" aria-hidden="true">◆</span><strong>2</strong><span>Other research roles</span></div>
+        </div>
+        <form class="research-filters" aria-label="Filter research projects">
+          <label>Role<select id="role-filter"><option value="all">All roles</option><option value="Principal Investigator">Principal Investigator</option><option value="Project Manager">Project Manager</option><option value="Co-Principal Investigator">Co-Principal Investigator</option><option value="Data Analyst">Data Analyst</option></select></label>
+          <label>Year<select id="year-filter"><option value="all">All years</option><option value="2025–2027">2025–2027</option><option value="2025–2026">2025–2026</option><option value="2024–2025">2024–2025</option><option value="2021–2022">2021–2022</option></select></label>
+          <label>Research area<select id="area-filter"><option value="all">All areas</option><option value="Education">Education</option><option value="Communication">Communication</option><option value="Digital society">Digital society</option><option value="Language">Language</option><option value="Gender">Gender</option></select></label>
+          <label>Project type<select id="type-filter"><option value="all">All projects</option><option value="Funded">Funded project</option><option value="Research">Research project</option></select></label>
+          <p id="project-summary" class="filter-summary">Showing <strong>6</strong> of 6 projects</p>
+        </form>
+        <div class="research-list">
+          <article id="instruction" class="research-card" data-role="Project Manager" data-year="2025–2027" data-area="Education" data-type="Funded">
+            <div class="research-badges"><span class="badge role-manager">Project Manager</span><span class="badge badge-year">2025–2027</span></div>
+            <h2>The Impact of Medium of Instruction on Educational Outcomes and Job Attainment Among Youth in Bangladesh</h2>
+            <p>Examining how the language of instruction shapes young people’s educational outcomes and pathways to employment.</p>
+            <div class="research-facts"><div><span>Institution / support</span><strong>HEAT Project, World Bank; University Grants Commission of Bangladesh</strong></div><div><span>Research area</span><strong>Education · Youth · Bangladesh</strong></div></div>
+          </article>
+          <article id="apprehension" class="research-card" data-role="Principal Investigator" data-year="2025–2026" data-area="Communication" data-type="Research">
+            <div class="research-badges"><span class="badge role-pi">Principal Investigator</span><span class="badge badge-year">2025–2026</span></div>
+            <h2>Communication Apprehension and Civic Engagement among Undergraduate Students in Bangladesh</h2>
+            <p>Examining the mediating role of willingness to communicate in undergraduate students’ civic engagement.</p>
+            <div class="research-facts"><div><span>Role</span><strong>Principal Investigator</strong></div><div><span>Research area</span><strong>Communication · Civic engagement · Higher education</strong></div></div>
+          </article>
+          <article id="trust" class="research-card" data-role="Principal Investigator" data-year="2025–2026" data-area="Digital society" data-type="Research">
+            <div class="research-badges"><span class="badge role-pi">Principal Investigator</span><span class="badge badge-year">2025–2026</span></div>
+            <h2>Disconnected and Distrustful? Internet Shutdowns, Information Environments, and Institutional Trust Among Generation Z in Bangladesh</h2>
+            <p>Investigating how internet shutdowns and information environments shape institutional trust among young people.</p>
+            <div class="research-facts"><div><span>Role</span><strong>Principal Investigator</strong></div><div><span>Research area</span><strong>Internet governance · Trust · Generation Z</strong></div></div>
+          </article>
+          <article class="research-card" data-role="Principal Investigator" data-year="2025–2026" data-area="Language" data-type="Funded">
+            <div class="research-badges"><span class="badge role-pi">Principal Investigator</span><span class="badge badge-year">2025–2026</span></div>
+            <h2>From Classroom to Career: Are Language Degrees Market-Relevant in Bangladesh?</h2>
+            <p>A study of the relationship between language education, employability, and career outcomes.</p>
+            <div class="research-facts"><div><span>Institution / support</span><strong>University of Dhaka research project; University Grants Commission of Bangladesh</strong></div><div><span>Research area</span><strong>Language education · Employment · Bangladesh</strong></div></div>
+          </article>
+          <article class="research-card" data-role="Co-Principal Investigator" data-year="2024–2025" data-area="Gender" data-type="Funded">
+            <div class="research-badges"><span class="badge role-copi">Co-Principal Investigator</span><span class="badge badge-year">2024–2025</span></div>
+            <h2>Balancing Professional Success and Marital Expectations: A Socio-Legal Study on the Career-Marriage Trade-off Facing Women in Bangladesh</h2>
+            <p>A socio-legal study of the professional and marital expectations affecting women’s career choices.</p>
+            <div class="research-facts"><div><span>Institution / support</span><strong>University of Dhaka research project; University Grants Commission of Bangladesh</strong></div><div><span>Research area</span><strong>Gender · Work · Socio-legal studies</strong></div></div>
+          </article>
+          <article class="research-card" data-role="Data Analyst" data-year="2021–2022" data-area="Communication" data-type="Research">
+            <div class="research-badges"><span class="badge role-analyst">Data Analyst</span><span class="badge badge-year">2021–2022</span></div>
+            <h2>Communication Apprehension among Students of Bangladesh: A Comparative Study between Online and Offline Classes</h2>
+            <p>Compared student communication apprehension across online and offline class environments.</p>
+            <div class="research-facts"><div><span>Contribution</span><strong>Data analysis and report writing</strong></div><div><span>Research area</span><strong>Communication · Online learning · Students</strong></div></div>
+          </article>
         </div>
       </div>
     </section>
-    <section id="infrastructure" class="section project-section">
-      <div class="section-grid">
-        <div class="section-label">Digital infrastructure</div>
-        <div>
-          <p class="project-count">Scholarly publishing systems, digital archives, and DOI infrastructure.</p>
-          <div class="project-list infrastructure-list">
-            <article class="project-card"><header class="project-card-header"><span>OJS platform &amp; archive</span><time>Shahitto Potrika</time></header><h2>Complete journal archive and DOI infrastructure</h2><p>Developed and implemented the OJS platform; digitally archived the complete article collection from 1957 to 2026; and implemented DOI infrastructure for journal content.</p></article>
-            <article class="project-card"><header class="project-card-header"><span>OJS platform</span><time>Bangla Academy</time></header><h2>Integrated journal-publishing environment</h2><p>Developed a unified OJS-based platform integrating eight Bangla Academy journals and supported DOI activation across the journal environment.</p></article>
-            <article class="project-card"><header class="project-card-header"><span>OJS platform &amp; archive</span><time>BHĀBANAGARA</time></header><h2>Journal publishing and DOI support</h2><p>Developed and implemented the OJS platform, carried out digital archiving, and supported DOI activation.</p></article>
-            <article class="project-card"><header class="project-card-header"><span>OJS platform</span><time>IMLI journals</time></header><h2>Mother-language journal publishing systems</h2><p>Developed and implemented platforms for Matribhasha Patrika and Mother Language Journal, with DOI support.</p></article>
-            <article class="project-card"><header class="project-card-header"><span>OJS platform</span><time>Persian Journal</time></header><h2>Dhaka University Persian Journal platform</h2><p>Developed the OJS-based journal publishing platform and supported DOI activation.</p></article>
-            <article class="project-card"><header class="project-card-header"><span>Open Monograph Press</span><time>OMP platforms</time></header><h2>Open-access book publishing systems</h2><p>Selected platforms include the Department of Bangla, University of Dhaka; Bangla Academy Publications; and IMLI Publications.</p></article>
-          </div>
+    <section class="infrastructure-showcase">
+      <div class="research-shell">
+        <div class="research-heading compact"><p>Digital scholarship</p><h2>Publishing infrastructure</h2><span class="research-rule" aria-hidden="true"></span><div class="research-intro">OJS platforms, digital archives, and DOI systems for scholarly publishing in Bangladesh.</div></div>
+        <div class="infrastructure-grid">
+          <article><span>Shahitto Potrika</span><h3>Complete journal archive and DOI infrastructure</h3><p>OJS platform, complete archive from 1957 to 2026, and DOI implementation.</p></article>
+          <article><span>Bangla Academy</span><h3>Integrated journal-publishing environment</h3><p>Unified OJS platform for eight Bangla Academy journals and DOI activation.</p></article>
+          <article><span>BHĀBANAGARA</span><h3>Journal publishing and DOI support</h3><p>OJS platform, digital archiving, and DOI activation.</p></article>
+          <article><span>IMLI journals</span><h3>Mother-language journal publishing systems</h3><p>Platforms for Matribhasha Patrika and Mother Language Journal, with DOI support.</p></article>
+          <article><span>Persian Journal</span><h3>Dhaka University Persian Journal platform</h3><p>OJS-based publishing platform and DOI support.</p></article>
+          <article><span>OMP platforms</span><h3>Open-access book publishing systems</h3><p>Platforms for the Department of Bangla, Bangla Academy Publications, and IMLI Publications.</p></article>
         </div>
       </div>
     </section>
   </main>
   <footer class="site-footer"><div class="shell"><span>© 2026 Zobayer Abdullah</span><span>University of Dhaka</span></div></footer>
+  <script>
+    const filters=['role','year','area','type'].map(key=>document.querySelector('#'+key+'-filter')),cards=[...document.querySelectorAll('.research-card')],summary=document.querySelector('#project-summary');
+    function applyFilters(){let shown=0;cards.forEach(card=>{const visible=filters.every(filter=>filter.value==='all'||card.dataset[filter.id.replace('-filter','')]===filter.value);card.hidden=!visible;if(visible)shown++;});summary.innerHTML='Showing <strong>'+shown+'</strong> of 6 projects';}
+    filters.forEach(filter=>filter.addEventListener('change',applyFilters));
+  </script>
 </body>
 </html>
