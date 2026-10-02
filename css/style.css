@@ -119,6 +119,7 @@ p { margin:.35rem 0 1rem; }
 .gallery-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:2.5rem 1.25rem; }
 .gallery-card { width:100%; padding:0; border:0; background:none; color:inherit; cursor:zoom-in; text-align:center; }
 .gallery-card img { width:100%; aspect-ratio:4 / 3; object-fit:cover; transition:opacity .2s ease; }
+.gallery-card.wide-gallery-card img { object-fit:contain; background:#e8e6e1; }
 .gallery-card:hover img, .gallery-card:focus-visible img { opacity:.8; }
 .gallery-card:focus-visible { outline:3px solid var(--accent); outline-offset:5px; }
 .gallery-card .gallery-title { display:block; margin:.7rem auto 0; color:var(--ink); font:500 .78rem/1.45 var(--mono); letter-spacing:.03em; text-align:center; }
