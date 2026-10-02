@@ -3,7 +3,6 @@
 :root { --ink:#20221f; --muted:#5e625c; --rule:#d2d8da; --paper:#edf0f1; --accent:#426b5b; --serif:'Libre Baskerville', Georgia, serif; --sans:'Source Sans 3', Arial, sans-serif; --mono:'DM Mono', monospace; }
 * { box-sizing:border-box; }
 html { scroll-behavior:smooth; }
-@view-transition { navigation:auto; }
 body { margin:0; color:var(--ink); background:var(--paper); font:1.08rem/1.7 var(--sans); }
 a { color:var(--accent); text-underline-offset:3px; }
 a:hover { color:#214437; }
@@ -110,10 +109,6 @@ p { margin:.35rem 0 1rem; }
 .infrastructure-grid span { color:#9a3412; font:600 .75rem/1.25 var(--sans); letter-spacing:.07em; text-transform:uppercase; }
 .infrastructure-grid h3 { margin:1rem 0 .55rem; color:#292524; font:700 1.15rem/1.38 var(--serif); }
 .infrastructure-grid p { margin:0; color:#57534e; font-size:.95rem; line-height:1.6; }
-.motion-enabled .reveal { opacity:0; transform:translateY(1.35rem); transition:opacity .62s ease var(--reveal-delay,0ms),transform .62s cubic-bezier(.22,1,.36,1) var(--reveal-delay,0ms); }
-.motion-enabled .reveal.reveal-visible { opacity:1; transform:translateY(0); }
-.motion-enabled.is-leaving body { opacity:0; transform:translateY(-.5rem); transition:opacity .2s ease,transform .2s ease; }
-@media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *,*::before,*::after { animation-duration:.01ms !important; animation-iteration-count:1 !important; scroll-behavior:auto !important; transition-duration:.01ms !important; } }
 .entry { border-top:1px solid var(--rule); display:grid; grid-template-columns:115px 1fr; gap:1.4rem; padding:1.2rem 0; }
 .entry-year { padding-top:.22rem; color:var(--muted); font:.78rem/1.5 var(--mono); }
 .entry p { color:var(--muted); font-size:1rem; }
