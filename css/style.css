@@ -134,6 +134,11 @@ p { margin:.35rem 0 1rem; }
 .dialog-meta { margin:0 0 .45rem; color:var(--muted); font:.7rem/1.4 var(--mono); letter-spacing:.04em; }
 .dialog-copy h2 { margin-bottom:.4rem; font-size:1.35rem; }
 .dialog-caption { margin:.85rem 0 0; color:var(--ink); font:500 .95rem/1.5 var(--sans); }
+.dialog-actions { display:flex; flex-wrap:wrap; align-items:center; gap:.6rem; margin-top:1.15rem; }
+.slide-status { min-width:3.2rem; color:var(--muted); font:.72rem/1.2 var(--mono); }
+.dialog-action { border:1px solid var(--rule); background:transparent; color:var(--ink); padding:.45rem .65rem; cursor:pointer; font:600 .76rem/1.2 var(--sans); }
+.dialog-action:hover,.dialog-action:focus-visible { border-color:var(--accent); color:var(--accent); }
+.cover-status { min-height:1.25rem; margin:.65rem 0 0; color:var(--muted); font-size:.78rem; }
 .album-thumbnails { display:grid; grid-template-columns:repeat(auto-fit,minmax(130px,1fr)); gap:.65rem; padding:0 1.5rem 1.5rem; }
 .album-thumbnail { padding:0; border:2px solid transparent; background:#e8e6e1; cursor:pointer; }
 .album-thumbnail img { display:block; width:100%; aspect-ratio:4 / 3; object-fit:cover; }
