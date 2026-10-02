@@ -168,7 +168,6 @@ p { margin:.35rem 0 1rem; }
 @media (max-width:700px) { .footer-links { justify-content:flex-start; margin-top:1rem; } }
 @media (prefers-reduced-motion:reduce) { .album-card img { transition:none; } }
 
-.portrait-album { grid-column:1 / -1; }
-.portrait-triptych { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:.65rem; background:var(--paper); }
+.portrait-triptych { margin-bottom:2.5rem; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:.65rem; background:var(--paper); }
 .portrait-triptych img { width:100%; height:auto; aspect-ratio:2 / 3; object-fit:cover; }
 @media(max-width:700px) { .portrait-triptych { gap:.35rem; } }
