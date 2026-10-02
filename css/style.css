@@ -120,6 +120,7 @@ p { margin:.35rem 0 1rem; }
 .album-card { width:100%; padding:0; border:0; background:none; color:inherit; cursor:pointer; text-align:left; }
 .album-card img { display:block; width:100%; aspect-ratio:4 / 3; object-fit:cover; transition:opacity .2s ease,transform .2s ease; }
 .album-card:hover img, .album-card:focus-visible img { opacity:.84; transform:scale(1.01); }
+.album-card.is-previewing img { opacity:1; }
 .album-card:focus-visible { outline:3px solid var(--accent); outline-offset:5px; }
 .album-card-copy { display:block; padding-top:.8rem; }
 .album-count { display:block; color:var(--accent); font:600 .68rem/1.35 var(--mono); letter-spacing:.08em; text-transform:uppercase; }
@@ -165,3 +166,4 @@ p { margin:.35rem 0 1rem; }
 @media (max-width:700px) { .site-header .shell,.site-footer .shell { display:block; } .nav { justify-content:flex-start; margin-top:1rem; } .masthead { grid-template-columns:1fr; gap:2rem; padding:3.5rem 0; } .portrait-frame { width:min(100%,330px); } .section-grid { grid-template-columns:1fr; gap:1rem; } .interests { grid-template-columns:1fr; } .album-grid { grid-template-columns:1fr; gap:1.75rem; } .entry { grid-template-columns:1fr; gap:.3rem; } .page-intro { padding:3rem 0 2rem; } .projects-overview,.project-list { grid-template-columns:1fr; } .project-stat { min-height:0; border-right:0; border-bottom:1px solid var(--rule); padding:1rem 0; gap:.5rem; } .project-stat + .project-stat { padding-left:0; } .project-stat:last-child { border-bottom:0; } .project-card-header { margin-bottom:1.5rem; } .infrastructure-list .project-card { min-height:0; } .album-thumbnails { grid-template-columns:repeat(2,1fr); padding:0 1rem 1rem; } .dialog-copy { padding:1rem; } }
 @media (max-width:700px) { .research-shell { width:min(100% - 2rem,1152px); } .research-hero { padding:3.5rem 0 4rem; } .research-heading { margin-bottom:2.75rem; } .research-intro { font-size:1.05rem; } .research-stats { grid-template-columns:repeat(2,1fr); gap:2rem 1rem; } .stat-orb { width:4.8rem; height:4.8rem; } .research-filters { grid-template-columns:1fr; padding:1.15rem; } .research-card { padding:1.35rem; } .research-facts,.infrastructure-grid { grid-template-columns:1fr; } .infrastructure-showcase { padding:3.5rem 0 4rem; } }
 @media (max-width:700px) { .footer-links { justify-content:flex-start; margin-top:1rem; } }
+@media (prefers-reduced-motion:reduce) { .album-card img { transition:none; } }
