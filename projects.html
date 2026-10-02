@@ -17,7 +17,7 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="stylesheet" href="css/style.css">
-</head>
+<link rel="stylesheet" href="css/site-stats.css"></head>
 <body class="research-page">
   <header class="site-header">
     <div class="shell">
@@ -109,5 +109,5 @@
     function applyFilters(){let shown=0;cards.forEach(card=>{const visible=filters.every(filter=>filter.value==='all'||card.dataset[filter.id.replace('-filter','')]===filter.value);card.hidden=!visible;if(visible)shown++;});summary.innerHTML='Showing <strong>'+shown+'</strong> of 6 projects';}
     filters.forEach(filter=>filter.addEventListener('change',applyFilters));
   </script>
-</body>
+<script defer src="js/site-stats.js"></script></body>
 </html>

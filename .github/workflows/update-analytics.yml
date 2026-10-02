@@ -1,0 +1,55 @@
+name: Update website visitor counts
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 * * * *'
+permissions:
+  contents: write
+  pages: write
+concurrency:
+  group: update-analytics
+  cancel-in-progress: false
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check Analytics access is configured
+        id: configured
+        env:
+          GA_SERVICE_ACCOUNT_JSON: ${{ secrets.GA_SERVICE_ACCOUNT_JSON }}
+        run: |
+          if [ -n "$GA_SERVICE_ACCOUNT_JSON" ]; then
+            echo 'ready=true' >> "$GITHUB_OUTPUT"
+          else
+            echo 'Add GA_SERVICE_ACCOUNT_JSON to repository secrets to enable visitor counts.' >> "$GITHUB_STEP_SUMMARY"
+          fi
+      - uses: actions/checkout@v4
+        if: steps.configured.outputs.ready == 'true'
+      - uses: actions/setup-python@v5
+        if: steps.configured.outputs.ready == 'true'
+        with:
+          python-version: '3.12'
+      - name: Export aggregate counts from Google Analytics
+        if: steps.configured.outputs.ready == 'true'
+        env:
+          GA_SERVICE_ACCOUNT_JSON: ${{ secrets.GA_SERVICE_ACCOUNT_JSON }}
+        run: |
+          python -m pip install -r scripts/analytics-requirements.txt
+          python scripts/update_analytics.py
+      - name: Save and publish counts
+        if: steps.configured.outputs.ready == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPOSITORY: ${{ github.repository }}
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/site-stats.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Update public visitor counts'
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+          # GITHUB_TOKEN commits do not trigger Pages automatically.
+          gh api --method POST "repos/$REPOSITORY/pages/builds"
