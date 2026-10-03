@@ -34,7 +34,7 @@ def run_checks(base_url):
       page.wait_for_function("document.querySelector('#gallery-search').value==='' && document.querySelectorAll('.album-card:not([hidden])').length > 1")
       assert page.locator('.album-card:visible').count()==total
       page.locator('#gallery-sort').select_option('oldest')
-      assert page.locator('.album-card').first.get_attribute('data-album')=='shilpakala-paper-reading-2018'
+      assert page.locator('.album-card').first.get_attribute('data-album')=='traditional-performing-arts'
       page.locator('#gallery-sort').select_option('newest')
       assert page.locator('.album-card').first.get_attribute('data-album')=='students-farewell-2026'
       page.locator('[data-album="mahmuda"]').click()
