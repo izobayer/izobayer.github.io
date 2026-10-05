@@ -28,7 +28,8 @@
   const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
   const dateValue = (text) => {
     const match = text.match(/(?:(\d{1,2})\s+)?([A-Za-z]+)\s+(\d{4})/);
-    return match ? Date.UTC(+match[3], months.indexOf(match[2]), +(match[1] || 1)) : 0;
+    const yearOnly = text.match(/\b(20\d{2})\b/);
+    return match ? Date.UTC(+match[3], months.indexOf(match[2]), +(match[1] || 1)) : (yearOnly ? Date.UTC(+yearOnly[1], 0, 1) : 0);
   };
   cards.forEach((card) => {
     const album = albums[card.dataset.album];
