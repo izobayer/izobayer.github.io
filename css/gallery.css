@@ -82,3 +82,6 @@
 }
 
 .section:has(.camera-slideshow) { container-type:inline-size; }
+
+.camera-slideshow > .camera-fade-layer { position:absolute; inset:0; opacity:0; pointer-events:none; }
+.camera-overlay { z-index:1; }

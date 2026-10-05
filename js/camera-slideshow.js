@@ -2,23 +2,44 @@
   const root = document.querySelector('.camera-slideshow');
   const image = document.querySelector('#camera-photo');
   const play = document.querySelector('#camera-play');
+  const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const previousImage = image.cloneNode();
+  previousImage.removeAttribute('id');
+  previousImage.alt = '';
+  previousImage.setAttribute('aria-hidden', 'true');
+  previousImage.className = 'camera-fade-layer';
+  image.after(previousImage);
+  const loadedPhotos = cameraPhotos.map(photo => {
+    const preload = new Image();
+    preload.src = photo.src;
+    return preload.decode().then(() => preload).catch(() => null);
+  });
+  let request = 0;
+  let fade;
   let index = 0;
   let timer;
-  let playing = !matchMedia('(prefers-reduced-motion: reduce)').matches;
-  function show(next) {
+  let playing = !reducedMotion;
+  async function show(next) {
     index = (next + cameraPhotos.length) % cameraPhotos.length;
-    image.src = cameraPhotos[index].src;
-    image.alt = cameraPhotos[index].alt;
-    document.querySelector('#camera-count').textContent = `${index + 1} / ${cameraPhotos.length}`;
-    const preload = new Image();
-    preload.src = cameraPhotos[(index + 1) % cameraPhotos.length].src;
+    const selected = index;
+    const token = ++request;
+    const loaded = await loadedPhotos[selected];
+    if (token !== request || !loaded) return;
+    fade?.cancel();
+    previousImage.src = image.src;
+    image.src = cameraPhotos[selected].src;
+    image.alt = cameraPhotos[selected].alt;
+    document.querySelector('#camera-count').textContent = `${selected + 1} / ${cameraPhotos.length}`;
+    if (!reducedMotion && previousImage.src !== image.src) {
+      fade = previousImage.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 650, easing: 'ease-in-out' });
+    }
   }
   function sync() {
     clearInterval(timer);
     play.textContent = playing ? 'Pause' : 'Play';
     play.setAttribute('aria-pressed', String(playing));
     if (playing && !document.hidden && !root.matches(':hover') && !root.contains(document.activeElement)) {
-      timer = setInterval(() => show(index + 1), 5000);
+      timer = setInterval(() => show(index + 1), 3000);
     }
   }
   play.addEventListener('click', () => { playing = !playing; sync(); });

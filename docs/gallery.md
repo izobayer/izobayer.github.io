@@ -2,6 +2,7 @@
 
 The three opening portraits are now a regular Portraits album. A wide landscape
 slideshow above the albums displays nine photographs taken by Zobayer Abdullah.
+Images advance every three seconds with a 650ms crossfade after loading.
 It has previous/next and pause/play controls, pauses on hover or keyboard focus,
 and starts paused when reduced motion is preferred.
 
