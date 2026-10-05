@@ -249,7 +249,7 @@
   });
   function openSharedPhoto() {
     const params = new URLSearchParams(location.hash.slice(1));
-    const legacyStudentAlbums = { 'students-farewell-2026': 1, 'ma-students-2024': 2, 'freshers-reception-2022': 4, 'football-jersey-launch-2022': 6 };
+    const legacyStudentAlbums = { 'students-farewell-2026': 1, 'ma-students-2024': 2 };
     const requestedId = params.get('album');
     const offset = legacyStudentAlbums[requestedId];
     const id = offset === undefined ? requestedId : 'with-students';
