@@ -3,7 +3,7 @@
 The three opening portraits remain a separate, fixed row at their existing
 size. They are excluded from album search, filters, hover previews and the viewer.
 
-The 26 albums can be searched by title, place and event details, filtered by
+The 27 albums can be searched by title, place and event details, filtered by
 year and sorted by date, title or photograph count. Search terms combine with
 the year filter; Clear filters restores the full collection. Hover previews
 are opt-in and disabled when the browser prefers reduced motion.
