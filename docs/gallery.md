@@ -1,7 +1,7 @@
 # Gallery controls
 
 The three opening portraits are now a regular Portraits album. A wide landscape
-slideshow above the albums displays ten photographs taken by Zobayer Abdullah.
+slideshow above the albums displays nine photographs taken by Zobayer Abdullah.
 It has previous/next and pause/play controls, pauses on hover or keyboard focus,
 and starts paused when reduced motion is preferred.
 

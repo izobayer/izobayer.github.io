@@ -23,7 +23,7 @@ def run_checks(base_url):
       assert page.locator('[data-album="portraits"]').count()==1
       assert page.locator('.portrait-triptych').count()==0
       dimensions=page.locator('.camera-slideshow').bounding_box()
-      assert dimensions['width']/dimensions['height']>2.4
+      assert abs(dimensions['height']-(dimensions['width']/(3 if width==1280 else 2.5)+96))<2
       assert page.evaluate('document.documentElement.scrollWidth <= innerWidth')
       total=page.locator('.album-card').count()
       page.locator('#gallery-search').fill('pabna')
