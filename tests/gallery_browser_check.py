@@ -20,9 +20,10 @@ def run_checks(base_url):
       page.goto(base_url + '/gallery.html')
       page.wait_for_selector('#gallery-results')
       print(width,page.locator('#gallery-total').inner_text())
-      assert page.locator('.portrait-triptych img').count()==3
-      dimensions=page.locator('.portrait-triptych img').evaluate_all('(imgs)=>imgs.map(i=>({w:i.getBoundingClientRect().width,h:i.getBoundingClientRect().height}))')
-      assert abs(dimensions[0]['w']-(343.0625 if width==1280 else 112.9375))<.1
+      assert page.locator('[data-album="portraits"]').count()==1
+      assert page.locator('.portrait-triptych').count()==0
+      dimensions=page.locator('.camera-slideshow').bounding_box()
+      assert dimensions['width']/dimensions['height']>2.4
       assert page.evaluate('document.documentElement.scrollWidth <= innerWidth')
       total=page.locator('.album-card').count()
       page.locator('#gallery-search').fill('pabna')

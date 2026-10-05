@@ -1,9 +1,11 @@
 # Gallery controls
 
-The three opening portraits remain a separate, fixed row at their existing
-size. They are excluded from album search, filters, hover previews and the viewer.
+The three opening portraits are now a regular Portraits album. A wide landscape
+slideshow above the albums displays ten photographs taken by Zobayer Abdullah.
+It has previous/next and pause/play controls, pauses on hover or keyboard focus,
+and starts paused when reduced motion is preferred.
 
-The 27 albums can be searched by title, place and event details, filtered by
+The 28 albums can be searched by title, place and event details, filtered by
 year and sorted by date, title or photograph count. Search terms combine with
 the year filter; Clear filters restores the full collection. Hover previews
 are opt-in and disabled when the browser prefers reduced motion.

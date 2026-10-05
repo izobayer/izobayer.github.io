@@ -80,6 +80,9 @@
     const ordered = [...cards].sort((a, b) => {
       if (sort === 'title') return albums[a.dataset.album].title.localeCompare(albums[b.dataset.album].title);
       if (sort === 'photos') return albums[b.dataset.album].images.length - albums[a.dataset.album].images.length;
+      if (!metadata.get(a).date || !metadata.get(b).date) {
+        return Number(!metadata.get(a).date) - Number(!metadata.get(b).date);
+      }
       return (metadata.get(a).date - metadata.get(b).date) * (sort === 'oldest' ? 1 : -1);
     });
     let visible = 0;

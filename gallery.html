@@ -23,7 +23,10 @@
   <main class="shell">
     <header class="page-intro gallery-intro"><div class="eyebrow">Events, conversations, and public scholarship</div><h1>Media &amp; gallery</h1><p class="tagline">Moments from academic life, conversations, and public scholarship.</p></header>
     <section class="section">
-      <div class="portrait-triptych" role="group" aria-label="Portraits of Zobayer Abdullah"><img src="assets/images/portrait-corridor-front.png" alt="Front-facing portrait of Zobayer Abdullah with a softly blurred corridor background"><img src="assets/images/portrait-corridor-reference.png" alt="Portrait of Zobayer Abdullah in a charcoal suit"><img src="assets/images/portrait-corridor-side.png" alt="Zobayer Abdullah in profile with a softly blurred corridor background"></div>
+      <section class="camera-slideshow" aria-label="Photography by Zobayer Abdullah" aria-roledescription="carousel">
+        <img id="camera-photo" src="assets/images/camera-landscape-01.png" alt="Trees and illuminated campus buildings at night" decoding="async">
+        <div class="camera-overlay"><div><span class="camera-credit">Through my lens</span><p>Photography by Zobayer Abdullah</p></div><div class="camera-controls"><button id="camera-previous" type="button" aria-label="Previous landscape">←</button><button id="camera-play" type="button" aria-pressed="true">Pause</button><button id="camera-next" type="button" aria-label="Next landscape">→</button><span id="camera-count">1 / 10</span></div></div>
+      </section>
       <div class="gallery-heading"><div><span class="eyebrow">Explore the archive</span><h2>Albums &amp; moments</h2></div><p id="gallery-total"></p></div>
       <form class="gallery-tools" role="search" onsubmit="return false">
         <label class="gallery-search">Search albums<input id="gallery-search" type="search" placeholder="Title, place, or event…" autocomplete="off"></label>
@@ -61,6 +64,7 @@
       <button class="album-card" type="button" data-album="bangla-alumni-professor-gias-shamim"><img loading="lazy" decoding="async" src="assets/images/bangla-alumni-professor-gias-shamim.png" alt="With Professor Gias Shamim at a Bangla Department alumni programme"><span class="album-card-copy"><span class="album-count">3 photographs</span><span class="album-title">Bangla Department Alumni Programme</span><span class="album-meta">6 January 2018</span></span></button>
       <button class="album-card" type="button" data-album="academic-tour-shahed-2018"><img loading="lazy" decoding="async" src="assets/images/academic-tour-professor-sayed-mohammad-shahed-2018.png" alt="Academic tour with Professor Sayed Mohammad Shahed in 2018"><span class="album-card-copy"><span class="album-count">1 photograph</span><span class="album-title">Academic Tour with Professor Sayed Mohammad Shahed</span><span class="album-meta">2018</span></span></button>
       <button class="album-card" type="button" data-album="du-convocation-2018"><img loading="lazy" decoding="async" src="assets/images/university-of-dhaka-convocation-2018.png" alt="Zobayer Abdullah in graduation attire at the University of Dhaka convocation in 2018"><span class="album-card-copy"><span class="album-count">1 photograph</span><span class="album-title">University of Dhaka Convocation 2018</span><span class="album-meta">2018 · University of Dhaka</span></span></button>
+      <button class="album-card" type="button" data-album="portraits"><img loading="lazy" decoding="async" src="assets/images/portrait-corridor-front.png" alt="Portrait of Zobayer Abdullah"><span class="album-card-copy"><span class="album-count">3 photographs</span><span class="album-title">Portraits</span><span class="album-meta">Zobayer Abdullah</span></span></button>
     </div></section>
   </main>
   <dialog class="gallery-dialog" aria-labelledby="dialog-title">
@@ -76,7 +80,9 @@
   </dialog>
   <footer class="site-footer"><div class="shell"><span>© 2026 Zobayer Abdullah</span><span>University of Dhaka</span></div></footer>
   <script>
+    const cameraPhotos=[{"src": "assets/images/camera-landscape-01.png", "alt": "Trees and illuminated campus buildings at night"}, {"src": "assets/images/camera-landscape-02.png", "alt": "An illuminated courtyard at night"}, {"src": "assets/images/camera-landscape-03.png", "alt": "Tree branches against the sky"}, {"src": "assets/images/camera-landscape-04.png", "alt": "A red sunset above palm trees"}, {"src": "assets/images/camera-landscape-05.png", "alt": "Clouds above a green riverbank"}, {"src": "assets/images/camera-landscape-06.png", "alt": "Storm clouds over a riverbank"}, {"src": "assets/images/camera-landscape-07.png", "alt": "Sunset reflected on water beside a boat"}, {"src": "assets/images/camera-landscape-08.png", "alt": "Boats on a river under evening clouds"}, {"src": "assets/images/camera-landscape-09.png", "alt": "A bamboo bridge across a rural river"}, {"src": "assets/images/camera-landscape-10.png", "alt": "Golden sunset over water"}];
     const albums={
+      portraits:{"title": "Portraits", "meta": "Zobayer Abdullah", "detail": "Portraits of Zobayer Abdullah.", "images": [{"src": "assets/images/portrait-corridor-front.png", "alt": "Front-facing portrait of Zobayer Abdullah", "caption": "Front-facing portrait of Zobayer Abdullah"}, {"src": "assets/images/portrait-corridor-reference.png", "alt": "Portrait of Zobayer Abdullah in a charcoal suit", "caption": "Portrait of Zobayer Abdullah in a charcoal suit"}, {"src": "assets/images/portrait-corridor-side.png", "alt": "Zobayer Abdullah in profile", "caption": "Zobayer Abdullah in profile"}]},
       'du-convocation-2018':{title:'University of Dhaka Convocation 2018',meta:'2018 · University of Dhaka',detail:'At the University of Dhaka convocation in 2018. ঢাকা বিশ্ববিদ্যালয়ের সমাবর্তন ২০১৮।',images:[
         {src:'assets/images/university-of-dhaka-convocation-2018.png',alt:'Zobayer Abdullah in graduation attire at the University of Dhaka convocation in 2018',caption:'At the University of Dhaka convocation — 2018.'}
       ]},
@@ -187,5 +193,6 @@
     };
   </script>
 <script defer src="js/gallery.js"></script>
+<script defer src="js/camera-slideshow.js"></script>
 <script defer src="js/site-stats.js"></script></body>
 </html>
