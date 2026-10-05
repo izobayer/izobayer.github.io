@@ -18,25 +18,14 @@ def run_checks(base_url):
       page.on('pageerror',lambda e: errors.append(str(e)))
       page.route('https://www.googletagmanager.com/**',lambda r:r.abort())
       page.goto(base_url + '/gallery.html')
-      page.wait_for_selector('#gallery-results')
-      print(width,page.locator('#gallery-total').inner_text())
+      page.wait_for_selector('.album-card')
       assert page.locator('[data-album="portraits"]').count()==1
       assert page.locator('.portrait-triptych').count()==0
       dimensions=page.locator('.camera-slideshow').bounding_box()
       assert abs(dimensions['height']-(dimensions['width']/(3 if width==1280 else 2.5)+96))<2
       assert page.evaluate('document.documentElement.scrollWidth <= innerWidth')
-      total=page.locator('.album-card').count()
-      page.locator('#gallery-search').fill('pabna')
-      assert page.locator('.album-card:visible').count()==1
-      page.locator('#gallery-year').select_option('2022')
-      assert page.locator('.album-card:visible').count()==0
-      assert page.locator('#gallery-empty').is_visible()
-      page.locator('.gallery-reset').click()
-      page.wait_for_function("document.querySelector('#gallery-search').value==='' && document.querySelectorAll('.album-card:not([hidden])').length > 1")
-      assert page.locator('.album-card:visible').count()==total
-      page.locator('#gallery-sort').select_option('oldest')
-      assert page.locator('.album-card').first.get_attribute('data-album')=='traditional-performing-arts'
-      page.locator('#gallery-sort').select_option('newest')
+      assert page.locator('.gallery-heading,.gallery-tools,.gallery-results,.gallery-preview').count()==0
+      assert page.locator('.album-card').count()==28
       assert page.locator('.album-card').first.get_attribute('data-album')=='with-students'
       page.locator('[data-album="mahmuda"]').click()
       assert page.locator('#slide-status').inner_text()=='1 / 5'

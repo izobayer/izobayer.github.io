@@ -6,10 +6,8 @@ Images advance every three seconds with a 650ms crossfade after loading.
 It has previous/next and pause/play controls, pauses on hover or keyboard focus,
 and starts paused when reduced motion is preferred.
 
-The 28 albums can be searched by title, place and event details, filtered by
-year and sorted by date, title or photograph count. Search terms combine with
-the year filter; Clear filters restores the full collection. Hover previews
-are opt-in and disabled when the browser prefers reduced motion.
+The 28 albums appear directly below the slideshow, ordered newest first.
+Search, year filters, sorting controls, totals and hover preview were removed.
 
 Select an album to open the viewer. Use Previous / Next, left / right arrow
 keys, Home / End, thumbnails or horizontal swipes to navigate. Playback starts

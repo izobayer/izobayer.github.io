@@ -85,3 +85,5 @@
 
 .camera-slideshow > .camera-fade-layer { position:absolute; inset:0; opacity:0; pointer-events:none; }
 .camera-overlay { z-index:1; }
+
+.camera-slideshow + .album-grid { margin-top:2.5rem; }

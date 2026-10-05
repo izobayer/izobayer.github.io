@@ -9,9 +9,7 @@
   const image = $('.dialog-image');
   const thumbs = $('#album-thumbnails');
   const status = $('#cover-status');
-  const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const storageKey = 'zobayer-gallery-covers';
-  const previewTimers = new Map();
   let savedCovers = {};
   let currentId = '';
   let currentIndex = 0;
@@ -44,65 +42,18 @@
       cover.alt = album.images[index].alt;
     }
   });
-  [...new Set([...metadata.values()].map((item) => item.year))].filter(Boolean).sort().reverse().forEach((year) => {
-    const option = document.createElement('option');
-    option.value = year; option.textContent = year; $('#gallery-year').append(option);
-  });
-  const photoTotal = cards.reduce((sum, card) => sum + albums[card.dataset.album].images.length, 0);
-  $('#gallery-total').textContent = `${cards.length} albums · ${photoTotal} photographs`;
-
-  function stopPreview(card) {
-    const timer = previewTimers.get(card);
-    if (timer) clearInterval(timer);
-    previewTimers.delete(card);
+  function restoreCover(card) {
     const album = albums[card.dataset.album];
     const index = savedCovers[card.dataset.album];
     const cover = Number.isInteger(index) ? album.images[index] : null;
     card.querySelector('img').src = cover?.src || card.dataset.defaultCover;
     card.querySelector('img').alt = cover?.alt || card.dataset.defaultAlt;
-    card.classList.remove('is-previewing');
   }
-  function startPreview(card) {
-    const album = albums[card.dataset.album];
-    if (!$('#gallery-preview').checked || reducedMotion || album.images.length < 2 || previewTimers.has(card)) return;
-    let index = 0;
-    card.classList.add('is-previewing');
-    previewTimers.set(card, setInterval(() => {
-      index = (index + 1) % album.images.length;
-      card.querySelector('img').src = album.images[index].src;
-      card.querySelector('img').alt = album.images[index].alt;
-    }, 1200));
-  }
-  function filterAlbums() {
-    const words = $('#gallery-search').value.trim().toLowerCase().split(/\s+/).filter(Boolean);
-    const year = $('#gallery-year').value;
-    const sort = $('#gallery-sort').value;
-    const ordered = [...cards].sort((a, b) => {
-      if (sort === 'title') return albums[a.dataset.album].title.localeCompare(albums[b.dataset.album].title);
-      if (sort === 'photos') return albums[b.dataset.album].images.length - albums[a.dataset.album].images.length;
-      if (!metadata.get(a).date || !metadata.get(b).date) {
-        return Number(!metadata.get(a).date) - Number(!metadata.get(b).date);
-      }
-      return (metadata.get(a).date - metadata.get(b).date) * (sort === 'oldest' ? 1 : -1);
-    });
-    let visible = 0;
-    ordered.forEach((card) => {
-      const item = metadata.get(card);
-      card.hidden = (year && item.year !== year) || !words.every((word) => item.text.includes(word));
-      if (!card.hidden) visible++;
-      else stopPreview(card);
-      grid.append(card);
-    });
-    $('#gallery-results').textContent = `${visible} of ${cards.length} albums`;
-    $('#gallery-empty').hidden = visible !== 0;
-  }
-  $('#gallery-search').addEventListener('input', filterAlbums);
-  $('#gallery-year').addEventListener('change', filterAlbums);
-  $('#gallery-sort').addEventListener('change', filterAlbums);
-  $('.gallery-tools').addEventListener('reset', () => setTimeout(filterAlbums));
-  $('#gallery-preview').disabled = reducedMotion;
-  $('#gallery-preview').addEventListener('change', () => cards.forEach(stopPreview));
-  filterAlbums();
+  [...cards].sort((a, b) => {
+    const first = metadata.get(a).date, second = metadata.get(b).date;
+    if (!first || !second) return Number(!first) - Number(!second);
+    return second - first;
+  }).forEach(card => grid.append(card));
 
   function stopSlideshow() {
     if (slideshow) clearInterval(slideshow);
@@ -150,7 +101,7 @@
       dialog.close();
       return;
     }
-    cards.forEach(stopPreview);
+    cards.forEach(restoreCover);
     stopSlideshow();
     currentId = card.dataset.album;
     opener = card;
@@ -178,9 +129,6 @@
     $('.dialog-close').focus();
   }
   cards.forEach((card) => {
-    card.addEventListener('mouseenter', () => startPreview(card));
-    card.addEventListener('mouseleave', () => stopPreview(card));
-    card.addEventListener('blur', () => stopPreview(card));
     card.addEventListener('click', () => openAlbum(card));
   });
   $('#previous-photo').addEventListener('click', () => navigate(-1));
@@ -196,7 +144,7 @@
   });
   $('#set-cover').addEventListener('click', () => {
     savedCovers[currentId] = currentIndex;
-    stopPreview(opener);
+    restoreCover(opener);
     try {
       localStorage.setItem(storageKey, JSON.stringify(savedCovers));
       status.textContent = 'Album cover saved in this browser.';
@@ -249,7 +197,7 @@
   });
   stage.addEventListener('pointercancel', () => { touchStart = null; });
   document.addEventListener('visibilitychange', () => {
-    if (document.hidden) { stopSlideshow(); cards.forEach(stopPreview); }
+    if (document.hidden) { stopSlideshow(); cards.forEach(restoreCover); }
   });
   function openSharedPhoto() {
     const params = new URLSearchParams(location.hash.slice(1));
