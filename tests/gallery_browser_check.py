@@ -36,7 +36,7 @@ def run_checks(base_url):
       page.locator('#gallery-sort').select_option('oldest')
       assert page.locator('.album-card').first.get_attribute('data-album')=='traditional-performing-arts'
       page.locator('#gallery-sort').select_option('newest')
-      assert page.locator('.album-card').first.get_attribute('data-album')=='students-farewell-2026'
+      assert page.locator('.album-card').first.get_attribute('data-album')=='with-students'
       page.locator('[data-album="mahmuda"]').click()
       assert page.locator('#slide-status').inner_text()=='1 / 5'
       assert page.locator('#slideshow-toggle').inner_text()=='Play slideshow'
@@ -77,7 +77,7 @@ def run_checks(base_url):
       page.wait_for_selector('.gallery-dialog[open]')
       assert page.locator('#slide-status').inner_text()=='2 / 5'
       page.locator('.dialog-close').click()
-      page.locator('[data-album="students-farewell-2026"]').click()
+      page.locator('[data-album="heat-project-2025"]').click()
       assert page.locator('#next-photo').is_disabled()
       assert not page.locator('#slideshow-toggle').is_visible()
       page.locator('.dialog-close').click()

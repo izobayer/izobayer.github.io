@@ -3,7 +3,7 @@
 The three opening portraits remain a separate, fixed row at their existing
 size. They are excluded from album search, filters, hover previews and the viewer.
 
-The 22 albums can be searched by title, place and event details, filtered by
+The 19 albums can be searched by title, place and event details, filtered by
 year and sorted by date, title or photograph count. Search terms combine with
 the year filter; Clear filters restores the full collection. Hover previews
 are opt-in and disabled when the browser prefers reduced motion.
@@ -29,3 +29,11 @@ wraparound, zoom/Escape, slideshow controls, downloads, copied links, saved
 covers, focus restoration and one-photo albums at desktop and mobile widths.
 Fullscreen entry/exit, horizontal swipe and hover preview/restoration were also
 verified in Chromium during implementation.
+
+## Student library
+
+With Students combines the farewell, MA semester-end, freshers’ reception and
+football jersey launch photos with the 28 September 2026 master’s thesis
+submission photograph. The thesis photo is the public default cover and first
+image. Each earlier event retains its date in the captions. Existing student
+photo links resolve to their corresponding image in the combined album.

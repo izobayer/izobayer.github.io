@@ -249,10 +249,13 @@
   });
   function openSharedPhoto() {
     const params = new URLSearchParams(location.hash.slice(1));
-    const id = params.get('album');
+    const legacyStudentAlbums = { 'students-farewell-2026': 1, 'ma-students-2024': 2, 'freshers-reception-2022': 4, 'football-jersey-launch-2022': 6 };
+    const requestedId = params.get('album');
+    const offset = legacyStudentAlbums[requestedId];
+    const id = offset === undefined ? requestedId : 'with-students';
     const card = cards.find((item) => item.dataset.album === id);
     if (!card) return;
-    const photo = Number(params.get('photo') || 1) - 1;
+    const photo = Number(params.get('photo') || 1) - 1 + (offset || 0);
     openAlbum(card, Number.isInteger(photo) ? photo : 0);
   }
   window.addEventListener('hashchange', openSharedPhoto);
