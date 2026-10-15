@@ -109,5 +109,5 @@
     function applyFilters(){let shown=0;cards.forEach(card=>{const visible=filters.every(filter=>filter.value==='all'||card.dataset[filter.id.replace('-filter','')]===filter.value);card.hidden=!visible;if(visible)shown++;});summary.innerHTML='Showing <strong>'+shown+'</strong> of 6 projects';}
     filters.forEach(filter=>filter.addEventListener('change',applyFilters));
   </script>
-<script defer src="js/site-stats.js"></script></body>
+<script defer src="js/site-stats.js"></script><script defer src="js/navigation.js"></script></body>
 </html>
