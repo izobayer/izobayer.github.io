@@ -12,7 +12,7 @@
   toggle.setAttribute('aria-controls', nav.id);
   toggle.setAttribute('aria-expanded', 'false');
   toggle.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path class="menu-icon-open" d="M4 6h16M4 12h16M4 18h16"/><path class="menu-icon-close" d="m6 6 12 12M18 6 6 18"/></svg><span>Menu</span>';
-  nav.before(toggle);
+  header.querySelector('.brand').before(toggle);
   header.classList.add('has-mobile-menu');
 
   function setOpen(open, restoreFocus = false) {
