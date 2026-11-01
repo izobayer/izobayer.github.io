@@ -50,6 +50,8 @@
     card.querySelector('img').alt = cover?.alt || card.dataset.defaultAlt;
   }
   [...cards].sort((a, b) => {
+    const placement = Number(a.dataset.placement === 'bottom') - Number(b.dataset.placement === 'bottom');
+    if (placement) return placement;
     const first = metadata.get(a).date, second = metadata.get(b).date;
     if (!first || !second) return Number(!first) - Number(!second);
     return second - first;
